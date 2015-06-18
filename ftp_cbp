@@ -1,0 +1,8 @@
+##CountyBusinessPatterns-PuertoRico-2013
+##ftp://ftp.census.gov/econ2013/CBP_CSV/
+##Francisco Pesante
+##20150506
+setwd("P:/Proyectos Estadisticos/Areas tematicas/Economia/CBP/cbp13pr_ia_st")
+icbp13pr_st<-as.data.frame(read.csv("cbp13pr_ia_st.csv"))
+cbp13pr_st<-subset(icbp13pr_st,fipstate=="72")
+write.csv(cbp13pr_st,file="PR_CountyBusinessPatterns_st_2013.csv",row.names = F)
